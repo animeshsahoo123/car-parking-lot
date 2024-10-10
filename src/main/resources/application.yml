@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: car-parking-lot
+
+server:
+  port: 8086
+
+parking-lot:
+  name: Demo Parking Lot
+  slots: 5
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
