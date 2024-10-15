@@ -1,0 +1,34 @@
+server:
+  port: 8086
+
+parking-lot:
+  name: Demo Parking Lot
+  slots: 5
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+
+security:
+  username: testuser
+  password: testpass
+
+spring:
+  application:
+    name: car-parking-lot
+  cache:
+    cache-names:
+      - buckets
+      - filterConfigCache
+    type: caffeine
+    caffeine:
+      spec: maximumSize=1000000,expireAfterAccess=3600s
+
+rate-limit-config:
+  max-request-per-minute: 5
+
+logging:
+  level:
+    com.demo.carparkinglot: DEBUG
